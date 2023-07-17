@@ -1,0 +1,58 @@
+level 1 - Email and Password for user to login with mongodb
+level 2 - Encrypting the users password with mongoose encryption
+level 3 - hasing the passwords instead of making our own encryption key using md5
+its better to use md5 since it hashes it and its much better than the s2 encrypter
+level 4 - hashing and salting which makes random characters plus the hashing of the password
+since 2 passwords that are the same can have the same hash if we generate a salt or 
+random characters than 2 people with the same password wont have the same hash because
+of the salt using bcrypt
+level 5 - Cookies save browsing sessions so if you add something to your cart like a ps5 and exit
+when you come back the ps5 is still in your cart and than you go on facebook and see an ad from amazon
+dsiplaying a nintendo switch so we add cookies using 
+passport, passport-local, passport-local-mongoose, express-session
+so passport allows you to authenticate request and passport local does the same thing but for databases
+and usernames and passwords
+
+passport is the middleware to authenticate request for passport-local to make and send request throughout the database
+
+
+authentication is signifigant because the website will load faster since wthe data is processed and authenticated faster 
+passport-local mongoose seems to help passport.js with authentication since it deals with the database as well
+
+and express-session is another middleware but more catered to node express js and it makes session storage it seems we're going to be connecting all the pasport middle ware 
+with the express-session which then makes a browser session for cookies which makes sense
+and since we have the passport middleware it allows the data to be read easily and manipulated through the local database
+
+so passport-local authenticates usernames and passwords using passport js and that is one reason why we import passport js
+than the passport-local-mongoose does what passport-local does but with mongoose because we're using mongodb so we need this so the files can be authenticated and passport local seems more server side
+and passport-local-mognoose seems to deal with the backend/nosql
+and lastly express session allows a browser session to be made so we can simply begin to add cookies and things can be saved like the user being logged in because we wont want the user to login everytime
+
+so passport-local is a extention of passport and authenticates node.js files and usernames and passwords and the mongoose extension for that is passport-local-mongoose which works which bridges the gap 
+between passport-local and mongodb and express server makes a browswer session for things to be saved
+
+so we need a sessions because it makes it easier to authenticate the user which then makes it easier for the user to send and recieve request from the website because we know the user is logged in and we know who is asking for it
+
+
+so we use the token to made a id and than the user is identified as the id and then when they make a request or recieve data from the server we know that the user is that token then the server verifies and fowards that token to 
+the session data and that is where the data is stored 
+
+with jwt token everything is stored in one token and then session data doesnt exist if the user logs out or anyuthing all the data is deleted not the account though 
+
+so the user is identified with a token id when the user logs in the server takes that id into the database where the users data is collected and then when the user is logged in the cookies displays all the data it has on the user
+same when the user makes request or clicks on a ad or anything its all stored into an id and then the server takes the id and the information alongside and stores it in the database 
+like when you see the console on amazon and put it in the cart cookies knows that because when you go back to amazon its still there and than also when you go on facebook you see the ad on the same console 
+cookies has the data based on your id 
+
+state in react js allows us to render different data and chanage data based on the users prefrence 
+
+so react literaly reacts 
+you make the state in the start of the component then you write handlerfunctions that allow the component to be updated and this is where you write what happens and than inside the jsx
+you add the component name which is the one without set and then for examole the button gets clicked and then the handlerfunction is activated and then it goes from 1 to 2 then in the classname there is a function when its greater than
+one the class is passed on to the next number than next the react.js reacts and refreshes then boom number 2 is now highlisghted
+
+oaurth is basically what allows user to log into another application like facebook and google and etc without us having to manually do it and without us having to deal with getting hacked 
+the thing about these companies aka google and facebook is that they have amazing cyber secuirty so they never really get hacked so we wont have more pressure on the backend to worry about getting hacked we leave it to them
+we then get a auth code its the pass that allows us to use that users social media basically when they login and that token will be there unique code for us and the oauth token we get is the data the user allows us to pull from the app
+for example when a application allows you to login with facebook and then you get to connect all your friends and add them automatically and so on. thats the access token and thge auth code is the user signing in and agreeing we can use 
+that social media login for that users login which will be the users unique code on our end and we dont have to deal with his login information facebook will be storing his/her login information for us 
